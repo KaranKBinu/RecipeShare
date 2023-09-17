@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <title>Update User</title>
+</head>
+
+<body>
+
+  <div class="container mt-5">
+    <div class="button mb-4">
+      <a href="/admin" class="btn btn-primary mt-lg-1">Click Here to go to dashboard</a>
+    </div>
+    <a href="/admin/logout" class="btn btn-danger">Logout from admin panel</a>
+    <h1>Update User</h1>
+    <form action="<%= user._id %>" method="post">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="<%= user.username %>" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="<%= user.email %>" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" value="<%= user.password %>" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" value="<%= user.phone_number %>" class="form-control"
+          required />
+      </div>
+      <button type="submit" class="btn btn-success">Update User</button>
+      <a href="/admin" class="btn btn-secondary">Cancel</a>
+      <!-- Add Cancel button -->
+    </form>
+  </div>
+  <!-- Include Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

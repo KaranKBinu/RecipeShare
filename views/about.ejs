@@ -1,0 +1,88 @@
+<!-- about.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <%- include('header') %>
+    <div class="container mt-4">
+      <h1 class="text-center">About Us</h1>
+      <hr />
+
+      <!-- About Section -->
+      <section>
+        <h2>About Our Mission</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non diam
+          id eros tristique mattis vel ut dolor. Donec in lacinia mi, sed
+          posuere elit. Sed laoreet eget neque eget eleifend.
+        </p>
+      </section>
+
+      <!-- Team Section -->
+      <section>
+        <h2>Our Team</h2>
+        <p>
+          We have a dedicated team of professionals working to provide you with
+          the best recipes and culinary experiences. Meet our team:
+        </p>
+
+        <!-- Add team member details here -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="team-member1.jpg"
+                class="card-img-top"
+                alt="Team Member 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">John Doe</h5>
+                <p class="card-text">Chef</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="team-member2.jpg"
+                class="card-img-top"
+                alt="Team Member 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Jane Smith</h5>
+                <p class="card-text">Food Blogger</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="team-member3.jpg"
+                class="card-img-top"
+                alt="Team Member 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Michael Johnson</h5>
+                <p class="card-text">Nutritionist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <%- include('footer') %>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

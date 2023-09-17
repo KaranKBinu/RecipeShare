@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Add your custom styles -->
+    <link rel="stylesheet" href="css/profile.css" />
+    <!-- Replace with the actual path to your profile.css -->
+  </head>
+
+  <body>
+    <%- include('header') %>
+    <div class="container mt-5">
+      <h1 class="text-center">Profile Page</h1>
+      <div class="card mx-auto" style="max-width: 400px">
+        <div class="card-header bg-primary text-white">
+          <h5 class="card-title mb-0">User Details</h5>
+        </div>
+        <div class="card-body">
+          <% if (user.username) { %>
+          <!-- For custom login form -->
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <strong class="form-control-static"> <%= user.username %> </strong>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <strong class="form-control-static"> <%= user.email %> </strong>
+          </div>
+          <div class="form-group">
+            <label for="source">Source:</label>
+            <strong class="form-control-static">
+              Recipe sharing App User
+            </strong>
+          </div>
+          <% } else { %>
+          <!-- For social authentication -->
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <p class="form-control-static"><%= user._json.name %></p>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <p class="form-control-static"><%= user._json.email %></p>
+          </div>
+          <div class="form-group">
+            <label for="source">Source:</label>
+            <strong class="form-control-static"> <%= user.provider %> </strong>
+          </div>
+          <% } %>
+          <!-- Add more user details as needed -->
+        </div>
+      </div>
+    </div>
+    <%- include('footer') %>
+    <!-- Add Bootstrap JavaScript and jQuery (optional but recommended) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
